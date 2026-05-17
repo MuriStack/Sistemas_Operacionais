@@ -6,7 +6,11 @@ while true; do
     echo "2 - Buscar por conteúdo"
     echo "3 - Sair"
 
+    echo
+
     read -p "Escolha uma opção: " OPCAO
+
+    echo
 
     if [ $OPCAO -eq 3 ]; then
         echo "Encerrou..."
@@ -14,6 +18,8 @@ while true; do
     fi
     
     read -p "Digite o diretório: " DIRETORIO
+
+    echo
 
     if [ ! -d "$DIRETORIO" ]; then
         echo "Diretório inválido"
@@ -25,9 +31,11 @@ while true; do
 
         read -p "Digite o nome do arquivo: " NOME
 
+        echo
+
         RESULTADO=$(find "$DIRETORIO" -name "*$NOME*")
 
-        TOTAL=$(echo "$RESULTADO" | wc -l)
+        TOTAL=$(find "$DIRETORIO" -name "$NOME" | wc -l)
 
         > relatorio.txt
 
@@ -60,6 +68,8 @@ while true; do
     elif [ $OPCAO -eq 2 ]; then
 
         read -p "Digite a palavra que deseja procurar: " PALAVRA
+
+        echo
 
         RESULTADO=$(grep -r "$PALAVRA" "$DIRETORIO" 2>/dev/null)
 
