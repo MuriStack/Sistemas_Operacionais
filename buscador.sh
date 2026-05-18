@@ -16,7 +16,7 @@ while true; do
         echo "Encerrou..."
         break
     fi
-    
+
     read -p "Digite o diretório: " DIRETORIO
 
     echo
@@ -26,7 +26,7 @@ while true; do
         echo
         continue
     fi
-    
+
     if [ $OPCAO -eq 1 ]; then
 
         read -p "Digite o nome do arquivo: " NOME
@@ -45,22 +45,28 @@ while true; do
         echo "Diretório: $DIRETORIO" >> relatorio.txt
         echo "Busca por nome: $NOME" >> relatorio.txt
         echo "Total de arquivos encontrados: $TOTAL" >> relatorio.txt
-        echo "--------------------------------" >> relatorio.txt
-        
+
         SOMA=0
 
-        for ARQUIVO in $RESULTADO; do
+        if [ $TOTAL -gt 0 ]; then
 
-            TAMANHO=$(stat --format="%s" "$ARQUIVO")
+            echo "--------------------------------" >> relatorio.txt
 
-            SOMA=$((SOMA + TAMANHO))
+            for ARQUIVO in $RESULTADO; do
 
-            stat --format="%n | %s bytes | %y" "$ARQUIVO" >> relatorio.txt
+                TAMANHO=$(stat --format="%s" "$ARQUIVO")
 
-        done
+                SOMA=$((SOMA + TAMANHO))
 
-        echo "--------------------------------" >> relatorio.txt
-        echo "Tamanho total: $SOMA bytes" >> relatorio.txt
+                stat --format="%n | %s bytes | %y" "$ARQUIVO" >> relatorio.txt
+
+            done
+
+            echo "--------------------------------" >> relatorio.txt
+            echo "Tamanho total: $SOMA bytes" >> relatorio.txt
+
+        fi
+
         echo "--------------------------------" >> relatorio.txt
 
         cat relatorio.txt
@@ -83,14 +89,19 @@ while true; do
         echo "Diretório: $DIRETORIO" >> relatorio.txt
         echo "Busca por conteúdo: $PALAVRA" >> relatorio.txt
         echo "Ocorrências encontradas: $TOTAL" >> relatorio.txt
-        echo "--------------------------------" >> relatorio.txt
-        echo "$RESULTADO" >> relatorio.txt
+
+        if [ $TOTAL -gt 0 ]; then
+
+            echo "--------------------------------" >> relatorio.txt
+
+            echo "$RESULTADO" >> relatorio.txt
+
+        fi
+
         echo "--------------------------------" >> relatorio.txt
 
         cat relatorio.txt
 
-    else
-        echo "Opção inválida"
     fi
 
     echo
