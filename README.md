@@ -4,6 +4,20 @@ Projeto desenvolvido em Bash Script com o objetivo de automatizar buscas de arqu
 
 ##
 
+## 📥 Clonando o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/ShellFinder.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd ShellFinder
+```
+
+##
+
 ## 🚀 Funcionalidades
 
 - ✅ Busca de arquivos por nome
@@ -22,9 +36,11 @@ Projeto desenvolvido em Bash Script com o objetivo de automatizar buscas de arqu
 ## 📄 Relatório gerado
 
 O sistema cria automaticamente um arquivo:
-```
+
+```text
 relatorio.txt
 ```
+
 contendo:
 
 - 📅 Data da busca
@@ -42,24 +58,26 @@ contendo:
 
 Primeiro dê permissão de execução ao script:
 
-```Bash
+```bash
 chmod +x buscador.sh
 ```
 
 Depois execute:
 
-```Bash
+```bash
 ./buscador.sh
 ```
+
 ##
 
 ## 🖥️ Exemplo do menu
 
-```
+```text
 1 - Buscar por nome
 2 - Buscar por conteúdo
 3 - Sair
 ```
+
 ##
 
 ## 🎯 Objetivo do projeto
