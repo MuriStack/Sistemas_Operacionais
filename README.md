@@ -6,16 +6,17 @@ Projeto desenvolvido em Bash Script com o objetivo de automatizar buscas de arqu
 
 🚀 Funcionalidades
 
-✅ Busca de arquivos por nome
-✅ Busca de arquivos por conteúdo textual
-✅ Exibição do caminho completo dos arquivos
-✅ Exibição do tamanho dos arquivos em bytes
-✅ Exibição da data de modificação
-✅ Contagem total de arquivos encontrados
-✅ Soma do espaço total ocupado pelos arquivos
-✅ Geração automática de relatório .txt
-✅ Menu interativo no terminal
-✅ Validação de entradas e diretórios
+- ✅ Busca de arquivos por nome
+- ✅ Busca de arquivos por conteúdo textual
+- ✅ Exibição do caminho completo dos arquivos
+- ✅ Exibição do tamanho dos arquivos em bytes
+- ✅ Exibição da data de modificação
+- ✅ Contagem total de arquivos encontrados
+- ✅ Soma do espaço total ocupado pelos arquivos
+- ✅ Geração automática de relatório .txt
+- ✅ Menu interativo no terminal
+- ✅ Validação de entradas e diretórios
+  
 ---
 
 📄 Relatório gerado
@@ -26,14 +27,14 @@ relatorio.txt
 ```
 contendo:
 
--📅 Data da busca
--📁 Diretório pesquisado
--🔍 Termo pesquisado
--📊 Quantidade de arquivos encontrados
--📂 Caminho completo dos arquivos
--💾 Tamanho dos arquivos
--🕒 Data de modificação
--📦 Espaço total ocupado
+- 📅 Data da busca
+- 📁 Diretório pesquisado
+- 🔍 Termo pesquisado
+- 📊 Quantidade de arquivos encontrados
+- 📂 Caminho completo dos arquivos
+- 💾 Tamanho dos arquivos
+- 🕒 Data de modificação
+- 📦 Espaço total ocupado
 ---
 
 ▶️ Como executar
