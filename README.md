@@ -70,5 +70,5 @@ Este projeto foi desenvolvido para praticar:
 - Programação em Shell Script
 - Manipulação de arquivos e diretórios
 - Integração entre comandos Linux e Bash
--Lógica de programação
--Geração automatizada de relatórios
+- Lógica de programação
+- Geração automatizada de relatórios
